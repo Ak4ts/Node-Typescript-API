@@ -1,0 +1,25 @@
+{
+  "name": "typescript-project",
+  "version": "1.0.0",
+  "description": "no description :)",
+  "main": "index.ts",
+  "scripts": {
+    "test": "deno run index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ak4ts/typescript.git"
+  },
+  "author": "Luiz (ak4ts)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ak4ts/typescript/issues"
+  },
+  "homepage": "https://github.com/Ak4ts/typescript#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1"
+  }
+}
