@@ -11,5 +11,10 @@ class UserController {
     const { email } = req.body
     const users = await User.findOne({email})
 
+    if(users) return res.status(409).json({ error: "User Already Exists!"})
+    const user = await User.create(req.body)
+    return res.status(200).json(user)
+  }
+}
 
 export default new UserController()
