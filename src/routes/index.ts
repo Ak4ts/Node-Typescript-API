@@ -4,7 +4,7 @@ import UserMiddleware from "../middlewares/UserMiddleware"
 
 const routes = Router()
 
-routes.get('/api/users', UserController.index)
+routes.get("/api/users", UserController.index)
 routes.post("/api/users", UserController.create);
 routes.delete("/api/users",UserMiddleware.verifyToken, UserController.deleteUser)
 
