@@ -1,9 +1,11 @@
 import { Schema, model, Document } from "mongoose";
 
 interface UserInterface extends Document {
-  email?: String;
-  nome?: String;
-  senha?: String;
+  email?: string;
+  name?: string;
+  password?: string;
+  token?: string;
+  _id?: string;
 }
 
 const UserSchema = new Schema({ 
