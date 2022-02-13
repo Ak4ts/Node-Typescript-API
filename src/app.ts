@@ -9,6 +9,10 @@ class App {
 
   public constructor() {
     this.express = express();
+    this.routes()
+  }
+  private routes(): void {
+    this.express.use(routes)
   }
 }
 
