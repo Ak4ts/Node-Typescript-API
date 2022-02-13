@@ -8,10 +8,11 @@ interface UserInterface extends Document {
   _id?: string;
 }
 
-const UserSchema = new Schema({ 
+export const UserSchema = new Schema({ 
   email: String,
-  nome: String,
-  senha: String
+  name: String,
+  password: String,
+  token: String,
 }, {
   timestamps: true
 })
