@@ -4,7 +4,8 @@
   "description": "no description :)",
   "main": "index.ts",
   "scripts": {
-    "test": "deno run index.ts"
+    "dev": "nodemon src/index.ts",
+    "build": "sucrase ./src -d .dist --transform typescript,imports"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,25 @@
   "homepage": "https://github.com/Ak4ts/typescript#readme",
   "dependencies": {
     "axios": "^0.25.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "mongoose": "^6.2.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^17.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "nodemon": "^2.0.15",
+    "sucrase": "^3.20.3",
+    "typescript": "^4.5.5"
   }
 }
