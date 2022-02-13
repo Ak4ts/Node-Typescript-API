@@ -34,6 +34,18 @@ class UserController {
     next()
     return res.status(200)
   }
+  public async deleteUser(req: Request, res: Response): Promise<Response> {
+    const { email } = req.body
+    const user = await User.findOne({ email })
+    if(!user) return res.status(403).json({ error: "User not found" });
+    try{
+      user?.delete()
+      console.log("User deleted")
+    } catch(err) {
+      return res.status(403).json({ error: "an error occurred while deleting user" });
+    }
+    return res.status(200)
+  }
 }
 
 
