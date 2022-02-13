@@ -9,7 +9,11 @@ class App {
 
   public constructor() {
     this.express = express();
+    this.database()
     this.routes()
+  }
+  private database(): void {
+    mongoose.connect("mongodb://localhost:27017/ts");
   }
   private routes(): void {
     this.express.use(routes)
