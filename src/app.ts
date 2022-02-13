@@ -21,7 +21,11 @@ class App {
     this.express.use(cors());
   }
   private database(): void {
-    mongoose.connect("mongodb://localhost:27017/ts");
+    mongoose.connect("mongodb://localhost:27017/ts").then(() => {
+      console.log("Database connected");
+    }).catch(() => {
+      console.log("Failed to connect to Database")
+    });
   }
   private routes(): void {
     this.express.use(routes)
