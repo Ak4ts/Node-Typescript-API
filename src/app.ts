@@ -21,8 +21,8 @@ class App {
     this.express.use(cors());
   }
   private database(): void {
-    mongoose.connect("mongodb+srv://luiz:18250317@cluster0.chesh.mongodb.net/ts").then(() => {
-      console.log("Database connectesad");
+    mongoose.connect("mongodb://localhost:27017/ts").then(() => {
+      console.log("Database connected");
     }).catch(() => {
       console.log("Failed to connect to Database")
     });
