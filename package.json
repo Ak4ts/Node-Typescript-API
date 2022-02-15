@@ -4,7 +4,7 @@
   "description": "no description :)",
   "main": "index.ts",
   "scripts": {
-    "dev": "nodemon src/index.ts",
+    "dev": "nodemon -L src/index.ts",
     "build": "sucrase ./src -d .dist --transform typescript,imports"
   },
   "repository": {
