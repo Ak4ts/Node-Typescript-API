@@ -10,4 +10,6 @@ routes.delete("/api/users",UserMiddleware.verifyToken, UserController.deleteUser
 
 routes.post("/api/login", UserController.login, UserMiddleware.verifyToken , UserController.index);
 
+routes.get("/", UserController.updateUser)
+
 export default routes
