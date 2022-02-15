@@ -46,7 +46,12 @@ class UserController {
     }
     return res.status(200)
   }
+  public async updateUser(req: Request, res: Response): Promise<Response>{
+    const user = await User.findOne(req.body)
+    console.log(user)
+    console.log(req.body)           
+    return res.status(200);
+  }
 }
-
 
 export default new UserController()
